@@ -7,7 +7,22 @@
       ],
       "@shared/*": [
         "src/app/shared/*",
-      ]
+      ],
+      "@models/*": [
+        "src/app/models/*",
+      ],
+      "@store/*": [
+        "src/app/store/*",
+      ],
+      "@reducers/*": [
+        "src/app/store/reducers/*",
+      ],
+      "@actions/*": [
+        "src/app/store/actions/*",
+      ],
+      "@environment/*": [
+        "src/environments",
+      ],
     },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
