@@ -1,0 +1,13 @@
+@import '/src/variables.scss';
+
+:host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    h1 {font-size: $header;}
+    a{font-size: $text;}
+}

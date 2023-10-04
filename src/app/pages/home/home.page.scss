@@ -1,0 +1,40 @@
+@import '/src/variables.scss';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .banner {
+        margin-top: 200px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 90%;
+
+        h2 {
+            font-size: $title;
+        }
+
+        p {
+            font-size: $text;
+            opacity: 0.6;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: $small) {
+            flex-direction: column;
+        }
+    }
+
+    app-search-input {
+        width: 90%;
+        max-width: 1042px;
+    }
+}

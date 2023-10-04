@@ -1,0 +1,17 @@
+@import 'src/variables.scss';
+
+:host {
+    input{
+        width: 100%;
+        background: $secondary;
+        border: none;
+        outline: none;
+        border-radius: $radius;
+        height: 70px;
+        line-height: 70px;
+        font-size: $text;
+        color: $primary;
+        padding-left: 20px;
+        padding-right: 40px;
+    }
+}
