@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from '@reducers/index.state';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ComponentsModule } from '@shared/components.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ComponentsModule,
     StoreModule.forRoot([reducer]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
