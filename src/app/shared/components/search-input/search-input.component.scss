@@ -1,17 +1,32 @@
 @import 'src/variables.scss';
 
 :host {
-    input{
-        width: 100%;
-        background: $secondary;
-        border: none;
-        outline: none;
-        border-radius: $radius;
-        height: 70px;
-        line-height: 70px;
-        font-size: $text;
-        color: $primary;
-        padding-left: 20px;
-        padding-right: 40px;
+    .field-group{
+        position: relative;
+        input{
+            width: 100%;
+            background: $secondary;
+            border: none;
+            outline: none;
+            border-radius: $radius;
+            height: 70px;
+            line-height: 70px;
+            font-size: $text;
+            color: $primary;
+            padding-left: 20px;
+            padding-right: 40px;
+        }
+
+        button{
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: $action;
+            cursor: pointer;
+            font-size: 20px;
+        }
     }
 }

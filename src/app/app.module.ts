@@ -18,7 +18,7 @@ import { ComponentsModule } from '@shared/components.module';
     AppRoutingModule,
     ComponentsModule,
     StoreModule.forRoot([reducer]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [],
   bootstrap: [AppComponent]

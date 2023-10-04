@@ -1,1 +1,13 @@
-<input type="text" placeholder="Buscar cerveza..."/>
+<div class="field-group">
+    <input
+    type="text"
+    placeholder="Buscar cerveza..."
+    [formControl]="search"
+    (keyup)="updateValue($event)"
+    />
+
+    <button
+    (click)="clear()"
+    *ngIf="!isEmpty"
+    >x</button>
+</div>
