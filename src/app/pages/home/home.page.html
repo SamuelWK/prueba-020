@@ -8,4 +8,4 @@
 
 <app-search-input (changeSearch)="changeSearch($event)"></app-search-input>
 
-<app-beer-list *ngIf="list?.length" [list]="list"></app-beer-list>
+<app-beer-list *ngIf="list?.length" [list]="list" (selectedBeer)="selectedBeer($event)"></app-beer-list>

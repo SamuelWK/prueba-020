@@ -1,0 +1,61 @@
+@import 'src/variables.scss';
+
+:host {
+
+    .container {
+        display: flex;
+        padding: 10px;
+        border-radius: calc($radius / 2);
+        gap: 15px;
+        margin-top: 10px;
+        align-items: center;
+        cursor: pointer;
+
+        @media screen and (max-width: $small) {
+            flex-direction: column;
+        }
+
+        img {
+            height: 250px;
+        }
+
+        .left {
+            width: 250px;
+            max-width: 250px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .right {
+            .name {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+            }
+
+            span {
+                font-size: 10px;
+                color: $action;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            h5 {
+                font-size: 25px;
+            }
+
+            width: calc(100% - 265px);
+
+            @media screen and (max-width: $small) {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .chart{
+                width: 400px;
+            }
+        }
+    }
+}

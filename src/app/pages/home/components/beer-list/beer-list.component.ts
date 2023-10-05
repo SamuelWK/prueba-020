@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Beer } from '@models/beer.model';
 
 @Component({
@@ -8,4 +8,9 @@ import { Beer } from '@models/beer.model';
 })
 export class BeerListComponent {
   @Input() list: Array<Beer> = [];
+  @Output() selectedBeer = new EventEmitter<number>();
+
+  selected(id: number){
+    this.selectedBeer.emit(id);
+  }
 }

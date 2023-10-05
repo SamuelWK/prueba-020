@@ -5,6 +5,7 @@ import { HomePageRoutingModule } from './home.routing.module';
 import { ComponentsModule } from '@shared/components.module';
 import { BeerListComponent } from './components/beer-list/beer-list.component';
 
+
 @NgModule({
   declarations: [
     Home,

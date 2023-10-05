@@ -20,7 +20,7 @@ export class SearchInputComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.subscriptions.forEach(sub => sub.unsubscribe())
+    this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
   updateValue(value: Event) {

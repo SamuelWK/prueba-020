@@ -24,7 +24,6 @@
         max-height: 600px;
         overflow-y: scroll;
 
-
         li {
             background: #2F2D2D;
             display: flex;
@@ -57,7 +56,7 @@
                 }
 
                 p{
-                    font-size: $text;
+                    font-size: 15px;
                 }
 
                 h5{

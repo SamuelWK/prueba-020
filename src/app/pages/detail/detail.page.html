@@ -1,1 +1,16 @@
-<p>detail works!</p>
+<div class="container" *ngIf="beer">
+    <div class="left">
+        <img [src]="beer.image_url" alt="">
+    </div>
+    <div class="right">
+        <div class="name">
+            <h5>{{beer.name}}</h5>
+            <span *ngFor="let malt of beer.ingredients.malt; index as i;">
+                {{malt.name}} <span *ngIf="i !== beer.ingredients.malt.length -1">-</span>
+            </span>
+        </div>
+        <p>{{beer.description}}</p>
+
+        <div echarts [options]="chartOption" class="chart" *ngIf="chartOption"></div>
+    </div>
+</div>
