@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import { Beer } from '@models/beer.model';
+import { Store } from '@ngrx/store';
+import { BeerService } from '@shared/services/api/beer.service';
+import { SetBeerList } from '@store/actions/beer.action';
+import { SetBeerListStatus } from '@store/actions/ui.action';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +12,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.page.scss']
 })
 export class Home {
+  list: Array<Beer> = []
+  constructor(private beerService: BeerService, private store: Store){
 
+  }
+
+  async changeSearch(event: string){
+    const res = await lastValueFrom(this.beerService.getByFilter(event));
+    this.store.dispatch(new SetBeerList(res as any));
+  }
 }

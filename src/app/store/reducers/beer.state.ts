@@ -21,6 +21,12 @@ export function reducer(state: BeerState = initializeState(), action: beer.Actio
         selected: action.payload
       }
 
+    case beer.BEERLIST:
+      return {
+        ...state,
+        list: [...action.payload]
+      }
+
     default: {
       return initializeState();
     }

@@ -11,7 +11,8 @@ import { ComponentsModule } from '@shared/components.module';
   imports: [
     CommonModule,
     HomePageRoutingModule,
-    ComponentsModule
-  ]
+    ComponentsModule,
+  ],
+
 })
 export class HomeModule { }

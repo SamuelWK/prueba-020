@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducer } from '@reducers/index.state';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ComponentsModule } from '@shared/components.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,11 @@ import { ComponentsModule } from '@shared/components.module';
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
+    HttpClientModule,
     StoreModule.forRoot([reducer]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [HttpClientModule]
 })
 export class AppModule { }

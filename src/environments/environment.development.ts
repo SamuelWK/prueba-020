@@ -1,3 +1,4 @@
 export const environment = {
-    prod: false
+    prod: false,
+    url: 'https://api.punkapi.com/v2'
 };

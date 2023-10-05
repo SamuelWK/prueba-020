@@ -3,6 +3,7 @@ import { Action } from '@ngrx/store';
 
 export const SEARCH = '[Beer] Search';
 export const SELECT = '[Beer] Select';
+export const BEERLIST = '[Beer] Set new beer list';
 
 export class SearchAction implements Action {
     readonly type = SEARCH;
@@ -16,4 +17,10 @@ export class SelectAction implements Action {
     constructor(public payload: Beer) { }
 }
 
-export type Actions = SearchAction | SelectAction;
+export class SetBeerList implements Action {
+    readonly type = BEERLIST;
+
+    constructor(public payload: Array<Beer>) { }
+}
+
+export type Actions = SearchAction | SelectAction | SetBeerList;
