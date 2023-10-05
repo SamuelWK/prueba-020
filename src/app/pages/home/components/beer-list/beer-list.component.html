@@ -1,0 +1,16 @@
+<ul>
+    <li *ngFor="let beer of list">
+        <div class="left">
+            <img [src]="beer.image_url" alt="">
+        </div>
+        <div class="right">
+            <span *ngFor="let malt of beer.ingredients.malt; index as i;">
+                {{malt.name}} <span *ngIf="i !== beer.ingredients.malt.length -1">-</span>
+            </span>
+            <h5>{{beer.name}}</h5>
+            <p>{{beer.description}}</p>
+        </div>
+        <!-- {{beer.ingredients.malt}}
+        {{beer.ingredients.hops}} -->
+    </li>
+</ul>

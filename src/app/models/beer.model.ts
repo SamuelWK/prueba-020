@@ -14,7 +14,7 @@ export interface Beer {
     description: string;
     image_url: string;
     ingredients: {
-        malt: Ingredient;
-        hops: Ingredient;
+        malt: Array<Ingredient>;
+        hops: Array<Ingredient>;
     }
 }

@@ -7,3 +7,5 @@
 </div>
 
 <app-search-input (changeSearch)="changeSearch($event)"></app-search-input>
+
+<app-beer-list *ngIf="list?.length" [list]="list"></app-beer-list>

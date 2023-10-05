@@ -14,10 +14,17 @@ import { lastValueFrom } from 'rxjs';
 export class Home {
   list: Array<Beer> = []
   constructor(private beerService: BeerService, private store: Store){
-
+    this.store.subscribe((res: any) => {
+      this.list = res ? res[0].beers.list: []
+    })
   }
 
   async changeSearch(event: string){
+    if (!event || event === '') {
+      this.store.dispatch(new SetBeerList([]));
+      return;
+    }
+
     const res = await lastValueFrom(this.beerService.getByFilter(event));
     this.store.dispatch(new SetBeerList(res as any));
   }

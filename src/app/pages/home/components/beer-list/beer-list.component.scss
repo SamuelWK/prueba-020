@@ -1,0 +1,76 @@
+@import 'src/variables.scss';
+
+:host {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: none;
+        background: none;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $action;
+        border-radius: 10px;
+    }
+
+    ul {
+        background: $secondary;
+        border-radius: $radius;
+        padding: 10px;
+        max-height: 600px;
+        overflow-y: scroll;
+
+
+        li {
+            background: #2F2D2D;
+            display: flex;
+            padding: 10px;
+            border-radius: calc($radius / 2);
+            gap: 15px;
+            margin-top: 10px;
+            align-items: center;
+            cursor: pointer;
+
+            @media screen and (max-width: $small) {
+                flex-direction: column;
+            }
+
+            img {
+                height: 100px;
+            }
+
+            .left {
+                width: 130px;
+                max-width: 130px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .right {
+                span{
+                    font-size: 10px;
+                    color: $action;
+                }
+
+                p{
+                    font-size: $text;
+                }
+
+                h5{
+                    font-size: 25px;
+                }
+
+                width: calc(100% - 145px);
+
+                @media screen and (max-width: $small) {
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

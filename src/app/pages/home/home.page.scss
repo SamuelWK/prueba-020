@@ -33,8 +33,12 @@
         }
     }
 
-    app-search-input {
+    app-search-input, app-beer-list {
         width: 90%;
         max-width: 1042px;
+    }
+
+    app-beer-list{
+        margin-top: 30px;
     }
 }
